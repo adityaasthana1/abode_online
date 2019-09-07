@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "756813050205",
+    "firebase_url": "https://abode-599f4.firebaseio.com",
+    "project_id": "abode-599f4",
+    "storage_bucket": "abode-599f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756813050205:android:a460253a597406f7",
+        "android_client_info": {
+          "package_name": "com.findmyhome.abodeonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756813050205-c1p14rb21boots72jb7ck317oc44vcr7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.findmyhome.abodeonline",
+            "certificate_hash": "d377dcc0c4f055ad1354814e2e5ac4a2c9f5807e"
+          }
+        },
+        {
+          "client_id": "756813050205-d362oeun98jodn9gbvv7cqi05ta8t0q1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGjOLaMwB3nyVddxmuNTQVHG9uzCQ7294"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756813050205-d362oeun98jodn9gbvv7cqi05ta8t0q1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

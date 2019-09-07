@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:orientation="vertical"
+    android:background="#2c3e50"
+    android:layout_gravity="center_vertical"
+    >
+    <Button
+        android:id="@+id/profilebutton"
+        android:layout_alignParentStart="true"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/themecolor"
+        android:text="Profile"
+        android:textColor="#ecf0f1"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        />
+
+    <Button
+        android:id="@+id/inboxbutton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@color/themecolor"
+        android:layout_alignParentRight="true"
+        android:text="inbox"
+        android:textColor="#ecf0f1"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="bold"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="#8e44ad"/>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:id="@+id/llayout"
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:background="#2c3e50"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello! "
+                android:textColor="#ecf0f1"
+                android:fontFamily="@font/brushfont"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/usernamehome"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="@font/brushfont"
+                android:textColor="#ecf0f1"
+                android:textSize="26sp"
+                android:text="Username"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ecf0f1"
+            android:text="What are you looking for?"
+            android:fontFamily="@font/brushfont"
+            android:textSize="30sp"
+            />
+
+        <Button
+            android:id="@+id/hostelbutton"
+            android:layout_marginTop="40dp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bigbuttonshape"
+            android:text="Hostels"
+            android:textColor="#ecf0f1"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            />
+
+        <Button
+            android:id="@+id/pgbutton"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bigbuttonshape"
+            android:textStyle="bold"
+            android:text="PG"
+            android:textColor="#ecf0f1"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:fontFamily="sans-serif-condensed"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:id="@+id/rentalroom"
+            android:background="@drawable/bigbuttonshape"
+            android:text="Rental Rooms"
+            android:textColor="#ecf0f1"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            />
+
+        <Button
+            android:id="@+id/tiffinbutton"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bigbuttonshape"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Tiffin Centers"
+            android:textColor="#ecf0f1"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/uploadroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Got room for people? upload it."
+            android:layout_alignBottom="@id/llayout"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/brushfont"
+            android:textColor="#ecf0f1"
+            android:layout_marginTop="20dp"
+            android:textSize="23sp"/>
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:id="@+id/uploadcontentbutton"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bigbuttonshape"
+            android:text="Upload Content!"
+            android:textColor="#ecf0f1"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logoutbutton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="#ecf0f1"
+        android:background="#8e44ad"
+        android:text="Logout"
+        android:textStyle="italic"
+        android:textSize="15sp"
+        />
+
+
+
+
+
+</RelativeLayout>

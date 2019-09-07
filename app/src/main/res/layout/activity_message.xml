@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageActivity"
+    android:background="#34495e"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#2c3e50"
+        android:layout_alignParentTop="true"
+        >
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#8e44ad"
+            android:text="Back"
+            android:textColor="#ecf0f1"
+            android:fontFamily="sans-serif-condensed"
+            android:id="@+id/messagebackbutton"
+            />
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="#ecf0f1"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:textSize="18sp"
+            />
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#8e44ad"
+            android:layout_alignParentEnd="true"
+            android:text="| | |"
+            android:textColor="#ecf0f1"
+            android:id="@+id/messageoptions"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2c3e50"
+        >
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="#34495e"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:textColor="#ecf0f1"
+            android:textColorHint="#ecf0f1"
+            android:hint="Send message"
+            />
+
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#8e44ad"
+            android:layout_alignParentEnd="true"
+            android:text="send"
+            android:textColor="#ecf0f1"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

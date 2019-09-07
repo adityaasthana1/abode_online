@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileImageActivity"
+    android:orientation="vertical"
+    android:background="#2c3e50"
+    android:layout_gravity="center"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="#34495e"
+        android:padding="2dp"
+        android:id="@+id/uploadedimage"
+
+        />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_marginTop="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/bigbuttonshape"
+
+        />
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bigbuttonshape"
+        android:text="Choose from gallery"
+        android:id="@+id/choosefromgallerybutton"
+        android:textColor="#ecf0f1"
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bigbuttonshape"
+        android:text="Take Picture"
+        android:layout_marginTop="20dp"
+        android:id="@+id/takepicturebutton"
+        android:textColor="#ecf0f1" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bigbuttonshape"
+        android:text="Upload Image"
+        android:textColor="#ecf0f1"
+        android:id="@+id/imageuploadbutton"
+        android:layout_marginTop="60dp"
+        />
+
+
+
+</LinearLayout>
