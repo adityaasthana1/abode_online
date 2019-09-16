@@ -13,69 +13,87 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/logintextview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login to Abode"
         android:fontFamily="@font/brushfont"
         android:textColor="#ecf0f1"
-        android:textSize="50sp"
+        android:textSize="60sp"
         />
 
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="320dp"
-        android:layout_height="450dp"
-        android:background="@drawable/loginshape"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical"
+
         >
         <TextView
+            android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold"
+            android:textColor="#ecf0f1"
             android:fontFamily="sans-serif-condensed"
             android:text="Welcome Abode!"/>
 
-        <TextView
-            android:layout_marginTop="20dp"
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="30dp"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:fontFamily="sans-serif-condensed"
+               android:text="Email :"
+               android:textColor="#ecf0f1"
+               android:textSize="15sp"
+               android:textStyle="bold" />
+
+           <EditText
+               android:drawablePadding="5dp"
+               android:paddingLeft="10dp"
+               android:drawableLeft="@drawable/ic_email_black_24dp"
+               android:textSize="14sp"
+               android:layout_marginTop="10dp"
+               android:layout_width="250dp"
+               android:layout_height="40dp"
+               android:id="@+id/lemail"
+               android:inputType="textEmailAddress"
+               android:background="@drawable/edittextshape"
+
+               />
+
+       </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="30sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email :"
-            android:textColor="#636e72"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:fontFamily="sans-serif-condensed"
-            android:layout_marginEnd="90dp"/>
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_marginTop="10dp"
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:id="@+id/lemail"
-            android:inputType="textEmailAddress"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password :"
+                android:textColor="#ecf0f1"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:fontFamily="sans-serif-condensed"
+                />
 
+            <EditText
+                android:drawablePadding="5dp"
+                android:paddingLeft="10dp"
+                android:drawableLeft="@drawable/ic_lock_black_24dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:inputType="textPassword"
+                android:id="@+id/lpassword"
+                android:background="@drawable/edittextshape"
+                />
 
-            />
-        <TextView
-            android:layout_marginTop="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Password :"
-            android:textColor="#636e72"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:fontFamily="sans-serif-condensed"
-            android:layout_marginEnd="80dp"/>
-
-        <EditText
-            android:layout_marginTop="10dp"
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:inputType="textPassword"
-            android:id="@+id/lpassword"
-            />
+        </LinearLayout>
 
 
         <Button
@@ -88,7 +106,6 @@
             android:textColor="#ecf0f1"
             />
 
-    </LinearLayout>
 
 
 </LinearLayout>

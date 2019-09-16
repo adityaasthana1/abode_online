@@ -40,6 +40,12 @@ public class UploadContentActivity extends AppCompatActivity {
             }
         });
 
+        RentalRoomButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(UploadContentActivity.this,AddRentalRoomActivity.class));
+            }
+        });
 
 
     }

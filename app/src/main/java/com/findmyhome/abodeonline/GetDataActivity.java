@@ -58,7 +58,7 @@ public class GetDataActivity extends AppCompatActivity {
                     databaseReference = FirebaseDatabase.getInstance().getReference("users");
                     databaseReference.child(UserId).setValue(user);
                     Toast.makeText(GetDataActivity.this, "Data Stored", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(GetDataActivity.this,LoginActivity.class));
+                    //startActivity(new Intent(GetDataActivity.this,LoginActivity.class));
                     firebaseAuth.signOut();
                     finish();
                 }

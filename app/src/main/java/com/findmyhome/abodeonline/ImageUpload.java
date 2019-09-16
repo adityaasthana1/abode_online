@@ -1,28 +1,30 @@
 package com.findmyhome.abodeonline;
 
 public class ImageUpload {
-    public String ImageName,ImageUri;
+   public String imagename,imageurl;
 
-    public ImageUpload(){}
+   public ImageUpload(){
 
-    public ImageUpload(String imageName, String imageUri) {
-        ImageName = imageName;
-        ImageUri = imageUri;
+   }
+
+    public ImageUpload(String imagename, String imageurl) {
+        this.imagename = imagename;
+        this.imageurl = imageurl;
     }
 
-    public String getImageName() {
-        return ImageName;
+    public String getImagename() {
+        return imagename;
     }
 
-    public void setImageName(String imageName) {
-        ImageName = imageName;
+    public void setImagename(String imagename) {
+        this.imagename = imagename;
     }
 
-    public String getImageUri() {
-        return ImageUri;
+    public String getImageurl() {
+        return imageurl;
     }
 
-    public void setImageUri(String imageUri) {
-        ImageUri = imageUri;
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
     }
 }

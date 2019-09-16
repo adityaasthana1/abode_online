@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -60,24 +61,23 @@ public class ProfileImageActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
         storageReference = FirebaseStorage.getInstance().getReference().child("UserUploads");
-        databaseReference = FirebaseDatabase.getInstance().getReference("users").child(firebaseUser.getUid());
+        databaseReference = FirebaseDatabase.getInstance().getReference("profileimages").child(firebaseUser.getUid());
 
 
         SelectGalleryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 OpenFileChooser();
+                progressBar.setBackgroundColor(Color.parseColor("#8e44ad"));
             }
         });
-
         ImageUploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 UplodeFile();
+                databaseReference.setValue(ImageUri.toString());
             }
         });
-
-
     }
 
     private void OpenFileChooser(){
@@ -85,7 +85,6 @@ public class ProfileImageActivity extends AppCompatActivity {
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(intent,PICK_IMAGE_REQUEST);
-
     }
 
     @Override

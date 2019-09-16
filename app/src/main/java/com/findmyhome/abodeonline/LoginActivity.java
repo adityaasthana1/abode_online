@@ -7,11 +7,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText email,password;
     Button signinbutton;
     FirebaseAuth firebaseAuth;
+    TextView LoginTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +36,11 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.lemail);
         password = findViewById(R.id.lpassword);
         signinbutton = findViewById(R.id.signinbutton);
+        LoginTextView = findViewById(R.id.logintextview);
+
+        Animation animation = AnimationUtils.loadAnimation(this,R.anim.bounce);
+
+        LoginTextView.startAnimation(animation);
 
         signinbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +64,12 @@ public class LoginActivity extends AppCompatActivity {
                                             Toast.makeText(getApplicationContext(),"Verify Email",Toast.LENGTH_SHORT).show();
                                         }
                                     }
+                                }
+                            })
+                            .addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(LoginActivity.this, "Wrong email or password", Toast.LENGTH_SHORT).show();
                                 }
                             });
                 }

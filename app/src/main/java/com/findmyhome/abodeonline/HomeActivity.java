@@ -21,7 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 public class HomeActivity extends AppCompatActivity {
 
     private Button logout,profilebutton,inboxbutton;
-    private Button hostels,PG,rentalrooms,Uploadcontent;
+    private Button HostelSearchButton,PgSearchButton,RentalRoomSearchButton,UploadContentButton;
     DatabaseReference databaseReference;
     TextView usernamehome;
 
@@ -35,27 +35,58 @@ public class HomeActivity extends AppCompatActivity {
         String userid = user.getUid();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("users").child(userid);
         usernamehome = findViewById(R.id.usernamehome);
-
+        inboxbutton = findViewById(R.id.inboxbutton);
         profilebutton = findViewById(R.id.profilebutton);
+        HostelSearchButton = findViewById(R.id.hostelbutton);
+        PgSearchButton = findViewById(R.id.pgbutton);
+        RentalRoomSearchButton = findViewById(R.id.pgbutton);
+        UploadContentButton = findViewById(R.id.uploadcontentbutton);
 
 
-        databaseReference.addValueEventListener(new ValueEventListener() {
+            databaseReference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                    if (dataSnapshot.exists()) {
+                        String uname = dataSnapshot.child("firstname").getValue().toString();
+                        usernamehome.setText(uname);
+                    }else{
+                        startActivity(new Intent(HomeActivity.this,GetDataActivity.class));
+                    }
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    Toast.makeText(getApplicationContext(),"LOL",Toast.LENGTH_SHORT).show();
+                }
+            });
+
+
+        logout = findViewById(R.id.logoutbutton);
+
+        HostelSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String uname = dataSnapshot.child("firstname").getValue().toString();
-                usernamehome.setText(uname);
-            }
+            public void onClick(View view) {
+               // Toast.makeText(HomeActivity.this, "Activity Coming Soon", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(HomeActivity.this,SearchHostelActivity.class));
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(getApplicationContext(),"LOL",Toast.LENGTH_SHORT).show();
             }
         });
-        logout = findViewById(R.id.logoutbutton);
-        hostels = findViewById(R.id.hostelbutton);
-        PG = findViewById(R.id.pgbutton);
-        rentalrooms = findViewById(R.id.rentalroom);
-        Uploadcontent = findViewById(R.id.uploadcontentbutton);
+
+        PgSearchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,SearchPgActivity.class));
+            }
+        });
+
+
+
+
+
+
+
         profilebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,12 +97,13 @@ public class HomeActivity extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth.signOut();;
+                startActivity(new Intent(HomeActivity.this,MainActivity.class));
                 finish();
+                firebaseAuth.signOut();;
             }
         });
 
-        Uploadcontent.setOnClickListener(new View.OnClickListener() {
+        UploadContentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HomeActivity.this, UploadContentActivity.class));

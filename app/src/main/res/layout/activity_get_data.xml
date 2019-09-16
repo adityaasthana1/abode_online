@@ -21,41 +21,24 @@
         android:textSize="50sp"
         />
 
-    <LinearLayout
-        android:id="@+id/getdatalayout"
-        android:layout_width="300dp"
-        android:layout_height="500dp"
-        android:background="@drawable/loginshape"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="vertical"
-
-        >
 
         <TextView
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Please verify the email too."
             android:textSize="15sp"
             android:textStyle="bold"
+            android:textColor="#ecf0f1"
             android:fontFamily="sans-serif-condensed"
-            />
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:hint="Unique Username"
-            android:layout_marginTop="20dp"
-            android:fontFamily="sans-serif-condensed"
-            android:textSize="15sp"
-            android:textColor="#2c3e50"
-            android:inputType="text"
             />
 
         <EditText
+            android:background="@drawable/edittextshape"
             android:id="@+id/firstname"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="40dp"
+            android:paddingLeft="10dp"
             android:hint="First name"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-condensed"
@@ -67,9 +50,11 @@
         <EditText
             android:id="@+id/lastname"
             android:layout_marginTop="20dp"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="40dp"
             android:hint="Last name"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittextshape"
             android:fontFamily="sans-serif-condensed"
             android:textSize="15sp"
             android:textColor="#2c3e50"
@@ -79,37 +64,43 @@
         <EditText
             android:layout_marginTop="20dp"
             android:id="@+id/phone"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="40dp"
             android:hint="Phone Number"
             android:fontFamily="sans-serif-condensed"
             android:textSize="15sp"
+            android:paddingLeft="10dp"
             android:textColor="#2c3e50"
             android:inputType="phone"
+            android:background="@drawable/edittextshape"
             />
 
         <EditText
             android:layout_marginTop="20dp"
             android:id="@+id/living"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="40dp"
             android:hint="Where do you live?"
             android:fontFamily="sans-serif-condensed"
             android:textSize="15sp"
             android:textColor="#2c3e50"
             android:inputType="text"
+            android:paddingLeft="10dp"
+            android:background="@drawable/edittextshape"
             />
 
         <EditText
             android:layout_marginTop="20dp"
             android:id="@+id/workplace"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="40dp"
             android:hint="Where do you work"
             android:fontFamily="sans-serif-condensed"
             android:textSize="15sp"
             android:textColor="#2c3e50"
+            android:paddingLeft="10dp"
             android:inputType="text"
+            android:background="@drawable/edittextshape"
             />
 
 
@@ -121,7 +112,7 @@
             android:text="Let's GO!"
             android:textColor="#ecf0f1"
             android:layout_marginTop="30dp"/>
-    </LinearLayout>
+
 
 
 </LinearLayout>

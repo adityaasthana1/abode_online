@@ -3,6 +3,7 @@ package com.findmyhome.abodeonline;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,13 +47,13 @@ public class AddHostelActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mdatabaseReference = FirebaseDatabase.getInstance().getReference("hostels");
-                final String Hostelname = HostelName.getText().toString().trim().toLowerCase();
+                final String Hostelname = HostelName.getText().toString().trim();
                 final String  Cityname = CityName.getText().toString().trim().toLowerCase();
-                String Hosteladdress = HostelAddress.getText().toString().trim().toLowerCase();
+                String Hosteladdress = HostelAddress.getText().toString().trim();
                 String Hostelaveragerent = HostelAverageRent.getText().toString().trim().toLowerCase();
                 String Hostelcontact = HostelContact.getText().toString().trim();
                 final HostelInfo hostelInfo = new HostelInfo(Hostelname,Cityname,Hosteladdress,Hostelaveragerent,Hostelcontact,firebaseUser.getEmail());
-
+                final HostelInfo hostelObject = hostelInfo;
                 if(Hosteladdress.isEmpty() || Cityname.isEmpty() || Hostelaveragerent.isEmpty() || Hostelcontact.isEmpty() || Hostelname.isEmpty()){
                     Toast.makeText(AddHostelActivity.this, "Empty Fields", Toast.LENGTH_SHORT).show();
                 }else{
@@ -65,13 +66,16 @@ public class AddHostelActivity extends AppCompatActivity {
                             }else{
                                 mdatabaseReference.child(Cityname).child(Hostelname).setValue(hostelInfo);
                                 Toast.makeText(getApplicationContext(),"Hostel Registered",Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(AddHostelActivity.this,UploadHostelImageActivity.class);
+                                intent.putExtra("HOSTEL_NAME",hostelObject);
+                                startActivity(intent);
                                 finish();
                             }
                         }
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                            Toast.makeText(AddHostelActivity.this, "Database Error", Toast.LENGTH_SHORT).show();
                         }
                     });
 

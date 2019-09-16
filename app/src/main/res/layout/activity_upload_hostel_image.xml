@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploadHostelImageActivity"
+    android:background="#2c3e50"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload images now!"
+        android:textSize="30sp"
+        android:fontFamily="@font/brushfont"
+        android:textColor="#ecf0f1"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#34495e"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Uploadedhostelimage"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bigbuttonshape"
+        android:text="Select images"
+        android:textColor="#ecf0f1"
+        android:id="@+id/selecthostelimages"
+        android:textSize="13sp"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/hostelselectimageuploader"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bigbuttonshape"
+        android:layout_marginTop="60dp"
+        android:text="UPLOAD"
+        android:textColor="#ecf0f1"
+        android:textSize="13sp"/>
+
+
+
+</LinearLayout>

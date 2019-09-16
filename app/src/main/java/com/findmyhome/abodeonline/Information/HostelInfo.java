@@ -1,7 +1,9 @@
 package com.findmyhome.abodeonline.Information;
 
-public class HostelInfo {
-    public String hostelname,hostelcity,hosteladdress,hostelrent,hostelcontact,OwnerEmail;
+import java.io.Serializable;
+
+public class HostelInfo implements Serializable {
+    public String hostelname,hostelcity,hosteladdress,hostelrent,hostelcontact,owneremail;
 
     public HostelInfo(){
 
@@ -13,7 +15,7 @@ public class HostelInfo {
         this.hosteladdress = hosteladdress;
         this.hostelrent = hostelrent;
         this.hostelcontact = hostelcontact;
-        this.OwnerEmail = ownerEmail;
+        this.owneremail = ownerEmail;
     }
 
     public String getHostelname() {
@@ -54,5 +56,13 @@ public class HostelInfo {
 
     public void setHostelcontact(String hostelcontact) {
         this.hostelcontact = hostelcontact;
+    }
+
+    public String getOwneremail() {
+        return owneremail;
+    }
+
+    public void setOwneremail(String owneremail) {
+        this.owneremail = owneremail;
     }
 }
