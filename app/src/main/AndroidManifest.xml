@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.findmyhome.abodeonline">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.abode.abodeonline">
 
     <application
         android:allowBackup="true"
@@ -8,22 +9,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".UploadHostelImageActivity"></activity>
-        <activity android:name=".ElementProfileActivity" />
-        <activity android:name=".SearchPgActivity" />
-        <activity android:name=".AddRentalRoomActivity" />
-        <activity android:name=".InboxActivity" />
-        <activity android:name=".SearchHostelActivity" />
-        <activity android:name=".AddHostelActivity" />
-        <activity android:name=".AddPGActivity" />
-        <activity android:name=".UploadContentActivity" />
-        <activity android:name=".ProfileImageActivity" />
-        <activity android:name=".MessageActivity" />
-        <activity android:name=".ProfileActivity" />
+        android:theme="@style/Theme.AbodeOnline">
+        <activity android:name=".RentalRoomActivity"></activity>
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".ReviewEntityActivity" />
+        <activity android:name=".ElementProfile" />
+        <activity android:name=".HostelActivity" />
+        <activity android:name=".AddImageActivity" />
+        <activity android:name=".AddResourcesActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".GetDataActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".GetDetailsActivity" />
+        <activity android:name=".SignupActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,9 +28,10 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:ignore="ManifestOrder" />
 
 </manifest>

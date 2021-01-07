@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='Abode Online'
+rootProject.name = "Abode Online"

@@ -1,180 +1,406 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:orientation="vertical"
-    android:background="#2c3e50"
-    android:layout_gravity="center_vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#fff"
     >
-    <Button
-        android:id="@+id/profilebutton"
-        android:layout_alignParentStart="true"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/themecolor"
-        android:text="Profile"
-        android:textColor="#ecf0f1"
-        android:fontFamily="sans-serif-condensed"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        />
-
-    <Button
-        android:id="@+id/inboxbutton"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:background="@color/themecolor"
-        android:layout_alignParentRight="true"
-        android:text="inbox"
-        android:textColor="#ecf0f1"
-        android:fontFamily="sans-serif-condensed"
-        android:textStyle="bold"
-
-        />
-
-
-
-
-
     <LinearLayout
-        android:layout_marginTop="50dp"
-        android:id="@+id/llayout"
         android:layout_width="match_parent"
-        android:layout_height="570dp"
-        android:background="#2c3e50"
+        android:padding="10dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layoutAnimation="@anim/layout_animation_fast"
+        android:elevation="10dp"
         android:orientation="vertical"
-        android:gravity="center"
-        android:layout_centerInParent="true"
+        tools:context=".HomeActivity">
 
-        >
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical"
             >
 
             <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello! "
-                android:textColor="#ecf0f1"
-                android:fontFamily="@font/brushfont"
-                android:textSize="26sp"
+                android:layout_gravity="center"
+                android:elevation="4dp"
+                android:fontFamily="@font/galada"
+                android:text="Abode Online"
+                android:textColor="#e84118"
+                android:textSize="24dp"
                 android:textStyle="bold"
-                />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/logoutbutton"
+                app:layout_constraintHorizontal_bias="0.586"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.363" />
+
+            <android.widget.Button
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_marginTop="4dp"
+                android:background="#444"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <Button
+                android:id="@+id/logoutbutton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="Logout"
+                android:textSize="6dp"
+                android:textColor="#ecf0f1"
+                android:textStyle="bold"
+                android:background="#e84118"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
             <TextView
-                android:id="@+id/usernamehome"
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:textStyle="bold"
-                android:fontFamily="@font/brushfont"
-                android:textColor="#ecf0f1"
-                android:textSize="26sp"
-                android:text="Username"
-                />
+                android:layout_height="wrap_content"
+                android:text="Welcome,"
+                android:textColor="#000"
+                android:fontFamily="@font/lato"
+                android:layout_gravity="start"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:layout_marginStart="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#000"
+                android:fontFamily="@font/lato"
+                android:id="@+id/userFirstName"
+                android:layout_gravity="start"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:layout_marginStart="10dp"/>
 
         </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#ecf0f1"
-            android:text="What are you looking for?"
-            android:fontFamily="@font/brushfont"
-            android:textSize="30sp"
+            android:text="Hope you're doing great today!"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:textSize="14dp"
             />
 
-        <Button
-            android:id="@+id/hostelbutton"
-            android:layout_marginTop="40dp"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:background="@drawable/bigbuttonshape"
-            android:text="Hostels"
-            android:textColor="#ecf0f1"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-condensed"
-            />
 
-        <Button
-            android:id="@+id/pgbutton"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:background="@drawable/bigbuttonshape"
-            android:textStyle="bold"
-            android:text="PG"
-            android:textColor="#ecf0f1"
-            android:layout_marginTop="20dp"
-            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/MyProfileLayout"
+            android:elevation="4dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/darkoutline"
+            android:layout_marginTop="10dp"
+            android:padding="4dp"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="100dp"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+                <ImageView
+                    android:layout_marginStart="5dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/hostelimg"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/userImageHome"
+                    />
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
 
-        <Button
-            android:fontFamily="sans-serif-condensed"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:id="@+id/rentalroom"
-            android:background="@drawable/bigbuttonshape"
-            android:text="Rental Rooms"
-            android:textColor="#ecf0f1"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            />
+                android:orientation="vertical"
+                android:gravity="start"
+                >
 
-        <Button
-            android:id="@+id/tiffinbutton"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/bigbuttonshape"
-            android:fontFamily="sans-serif-condensed"
-            android:text="Tiffin Centers"
-            android:textColor="#ecf0f1"
-            android:textStyle="bold"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="My Profile"
 
-            />
+                    android:textSize="24dp"
+                    android:fontFamily="@font/lato"
+                    android:textColor="#000"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tap here to visit your profile to manage your hostels of change your picture"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="14dp"
+                    android:layout_marginTop="5dp"
+                    />
 
-        <TextView
-            android:id="@+id/uploadroom"
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/hostelcard"
+            android:elevation="4dp"
+            android:background="@drawable/darkoutline"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/hostelimg2"
+                android:scaleType="centerCrop"
+                />
+
+            <android.widget.Button
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#444"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hostels"
+                android:textColor="#000"
+                android:fontFamily="@font/lato"
+                android:layout_gravity="start"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:text="Browse around the hostels present around you, check or submit their reviews."
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:elevation="4dp"
+            android:id="@+id/rentalrooms"
+            android:background="@drawable/darkoutline"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/rentalroomimg"
+                android:scaleType="centerCrop"
+                />
+
+            <android.widget.Button
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:backgroundTint="#444"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rental Rooms"
+                android:textColor="#000"
+                android:fontFamily="@font/lato"
+                android:layout_gravity="start"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"
+                android:text="browse for Rental Rooms present around you and look for reviews about them."
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/addresources"
+                android:elevation="5dp"
+                android:background="@drawable/darkoutline"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@drawable/addresourceimg"
+                    android:scaleType="centerCrop"
+                    />
+
+                <android.widget.Button
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:backgroundTint="#444"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Resources"
+                    android:textColor="#000"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="10dp"
+                    android:text="Bring your hostel business or services to our platform or add your rental rooms or PG's to the platform."
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:id="@+id/contactus"
+                android:elevation="5dp"
+                android:background="@drawable/darkoutline"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:src="@drawable/contactimg"
+                    android:scaleType="centerCrop"
+                    />
+
+                <android.widget.Button
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:backgroundTint="#444"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Us"
+                    android:textColor="#000"
+                    android:fontFamily="@font/lato"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="10dp"
+                    android:text="browse for Rental Rooms present around you and look for reviews about them."
+
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Got room for people? upload it."
-            android:layout_alignBottom="@id/llayout"
-            android:layout_centerHorizontal="true"
-            android:fontFamily="@font/brushfont"
-            android:textColor="#ecf0f1"
-            android:layout_marginTop="20dp"
-            android:textSize="23sp"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Designed by"
+                android:textSize="11dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Aditya Asthana"
+                android:textSize="11dp"
+                android:textColor="#e74c3c"
+                />
+        </LinearLayout>
 
-        <Button
-            android:layout_marginTop="15dp"
-            android:id="@+id/uploadcontentbutton"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:background="@drawable/bigbuttonshape"
-            android:text="Upload Content!"
-            android:textColor="#ecf0f1"
-            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All the copyrights of this app belong to Abode Online Business(R)"
+            android:fontFamily="@font/lato"
+            android:textSize="8dp"
+            android:layout_marginTop="5dp"
+            />
+
+
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/logoutbutton"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:textColor="#ecf0f1"
-        android:background="#8e44ad"
-        android:text="Logout"
-        android:textStyle="italic"
-        android:textSize="15sp"
-        />
 
-
-
-
-
-</RelativeLayout>
+</ScrollView>

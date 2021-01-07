@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    android:padding="4dp"
+    tools:context=".HostelActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layoutAnimation="@anim/layout_animation"
+        android:elevation="5dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/hostelimg1"
+            android:scaleType="centerCrop"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="4"
+                android:id="@+id/getcity"
+                android:background="@drawable/edittext"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:inputType="text"
+                android:maxLength="20"
+                android:fontFamily="@font/lato"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:hint="Enter your city"
+                />
+            <android.widget.Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/getcitybutton"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button0"
+                android:text="go"
+                android:textColor="#ecf0f1"
+                android:fontFamily="@font/lato"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/fade"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hostels"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/titlium"
+                android:textColor="#ecf0f1 "
+                android:textSize="44dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="Search for hostels nearyby you within one seach and get to look at their reviews."
+                android:fontFamily="@font/robot"
+                android:textColor="#ecf0f1"
+                android:layout_marginBottom="5dp"
+                android:textStyle="normal"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
+        android:id="@+id/CurrentCityTextView"
+        android:layout_marginTop="3dp"
+        android:textColor="#000"
+        android:drawableStart="@drawable/ic_baseline_location_on_24"
+        android:textSize="16dp"
+        android:drawablePadding="2dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        />
+
+
+    <ListView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/HostelListView"
+        android:elevation="5dp"
+        android:divider="#fff"
+        android:padding="5dp"
+        android:dividerHeight="5dp"
+        android:layoutAnimation="@anim/layout_animation"
+        />
+
+</LinearLayout>

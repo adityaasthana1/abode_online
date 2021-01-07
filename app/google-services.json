@@ -1,42 +1,33 @@
 {
   "project_info": {
-    "project_number": "756813050205",
-    "firebase_url": "https://abode-599f4.firebaseio.com",
-    "project_id": "abode-599f4",
-    "storage_bucket": "abode-599f4.appspot.com"
+    "project_number": "189231376791",
+    "project_id": "abode-online-db",
+    "storage_bucket": "abode-online-db.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:756813050205:android:a460253a597406f7",
+        "mobilesdk_app_id": "1:189231376791:android:5ddfd6dc258d9e8a65bcd2",
         "android_client_info": {
-          "package_name": "com.findmyhome.abodeonline"
+          "package_name": "com.abode.abodeonline"
         }
       },
       "oauth_client": [
         {
-          "client_id": "756813050205-c1p14rb21boots72jb7ck317oc44vcr7.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.findmyhome.abodeonline",
-            "certificate_hash": "d377dcc0c4f055ad1354814e2e5ac4a2c9f5807e"
-          }
-        },
-        {
-          "client_id": "756813050205-d362oeun98jodn9gbvv7cqi05ta8t0q1.apps.googleusercontent.com",
+          "client_id": "189231376791-jtrinmpcijsgafqu0jj00893kutefo4m.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCGjOLaMwB3nyVddxmuNTQVHG9uzCQ7294"
+          "current_key": "AIzaSyCdRz0Vm1L_-Ft-zpZ_ETFLhv5rsZPy0xQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "756813050205-d362oeun98jodn9gbvv7cqi05ta8t0q1.apps.googleusercontent.com",
+              "client_id": "189231376791-jtrinmpcijsgafqu0jj00893kutefo4m.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

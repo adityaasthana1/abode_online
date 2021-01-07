@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GetDetailsActivity"
+    android:id="@+id/getdetailbg"
+    android:gravity="center_horizontal"
+    android:layoutAnimation="@anim/layout_animation_fast"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="3dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="We're Almost there!"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:fontFamily="@font/galada"
+        android:textColor="#000"
+        android:layout_marginTop="150dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextshape"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:id="@+id/fname"
+            android:textSize="16dp"
+            android:layout_marginBottom="5dp"
+            android:hint="First name"
+            android:paddingStart="20dp"
+            android:inputType="text"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="20dp"
+
+            android:textColor="#000"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextshape"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:id="@+id/lname"
+            android:layout_marginBottom="5dp"
+            android:textSize="16dp"
+            android:hint="Last name"
+            android:paddingStart="20dp"
+            android:inputType="text"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="20dp"
+
+            android:textColor="#000"/>
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittextshape"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:id="@+id/phonedetail"
+        android:textSize="16dp"
+        android:hint="Phone"
+        android:paddingStart="20dp"
+        android:inputType="text"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#000"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittextshape"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:id="@+id/citydetail"
+        android:textSize="16dp"
+        android:hint="City"
+        android:paddingStart="20dp"
+        android:inputType="text"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#000"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittextshape"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:id="@+id/addressdetail"
+        android:textSize="16dp"
+        android:hint="Address"
+        android:paddingStart="20dp"
+        android:inputType="text"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#000"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittextshape"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:id="@+id/postaldetail"
+        android:textSize="16dp"
+        android:hint="Postal Code"
+        android:paddingStart="20dp"
+        android:inputType="text"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#000"/>
+
+    <android.widget.Button
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/button0"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
+        android:text="sign up"
+        android:textColor="#ecf0f1"
+        android:id="@+id/signupdetail"
+        />
+</LinearLayout>

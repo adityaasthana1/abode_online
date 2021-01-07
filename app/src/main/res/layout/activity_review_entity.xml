@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layoutAnimation="@anim/layout_animation"
+        android:padding="5dp"
+        tools:context=".ReviewEntityActivity">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/hostelimg"
+                android:id="@+id/ReviewEntityImage"
+                android:scaleType="centerCrop"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/fade"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shree Sai Dham Boys Hostel"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/lato"
+                    android:textColor="#ecf0f1 "
+                    android:textSize="34dp"
+                    android:id="@+id/ReviewEntityName"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="Please share your review. This will help us get better."
+                    android:fontFamily="@font/robot"
+                    android:textColor="#ecf0f1"
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="normal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    />
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Rating :"
+                android:textColor="#000"
+                android:elevation="4dp"
+                android:fontFamily="@font/lato"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5"
+                android:elevation="4dp"
+                android:id="@+id/CurrentReviewRating"
+                android:textColor="#000"
+                android:fontFamily="@font/lato"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                />
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:id="@+id/CurrentReviewRatingBar"
+                android:elevation="4dp"
+                android:layout_marginStart="10dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate the hostel"
+            android:textSize="20dp"
+            android:fontFamily="@font/lato"
+            android:textColor="#000"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            />
+
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/EntityRatingBar"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:elevation="5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Describe your review :"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="start"
+            android:fontFamily="@font/lato"
+            android:textSize="16dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:id="@+id/EntityReviewDescription"
+            android:background="@drawable/edittextshape"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:elevation="5dp"
+            android:layout_marginEnd="5dp"
+            android:inputType="textMultiLine"
+            android:hint="Write a review..."
+            android:padding="10dp"
+            />
+
+        <android.widget.Button
+            android:layout_width="match_parent"
+            android:elevation="5dp"
+            android:layout_height="40dp"
+            android:background="@drawable/button0"
+            android:layout_marginTop="80dp"
+            android:text="Submit Review"
+            android:textColor="#ecf0f1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/lato"
+            android:id="@+id/SubmitReviewButton"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="70dp"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Designed by"
+                android:textSize="11dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Aditya Asthana"
+                android:textSize="11dp"
+                android:textColor="#e74c3c"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

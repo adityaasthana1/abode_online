@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="3dp"
+    android:gravity="center_horizontal"
+    android:layoutAnimation="@anim/layout_animation"
+    android:layout_height="match_parent"
+    tools:context=".AddResourcesActivity">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/hostelimg"
+                android:scaleType="centerCrop"/>
+            <LinearLayout
+                android:background="@drawable/fade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Resource"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/titlium"
+                    android:textColor="#ecf0f1 "
+                    android:textSize="44dp"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="Bring your resources to our platform and help others get to their abode easily! Let's Get you started!"
+                    android:fontFamily="@font/robot"
+                    android:textColor="#ecf0f1"
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="normal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    />
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="What are you registering?"
+            android:textColor="#000"
+            android:textStyle="normal"
+            android:fontFamily="@font/lato"
+            android:textSize="14dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            >
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Hostel"
+                android:id="@+id/checkboxhostel"
+                android:textSize="14dp"
+                android:fontFamily="@font/lato"
+                android:textColor="#000"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+
+                />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Rental Room"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:id="@+id/checkboxrentalroom"
+                android:fontFamily="@font/lato"
+                android:textColor="#000"
+                android:layout_weight="1"
+
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="120dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/selectedprofileimage"
+                android:scaleType="centerCrop"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical"
+                android:gravity="start"
+                android:padding="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please Select an Image for Profile Picture :"
+                    android:fontFamily="@font/lato"
+                    android:textColor="#000"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+
+                    />
+
+                <android.widget.Button
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button0"
+                    android:text="Select Image"
+                    android:textColor="#ecf0f1"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="14dp"
+                    android:id="@+id/selectimagebutton"
+                    android:fontFamily="@font/lato"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextshape"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/EntityName"
+            android:textSize="16dp"
+            android:hint="Name"
+            android:paddingStart="20dp"
+            android:inputType="textPersonName"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="@drawable/edittextshape"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/EntityDescription"
+            android:textSize="16dp"
+            android:hint="Description"
+            android:paddingStart="20dp"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextshape"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/EntityPhone"
+            android:textSize="16dp"
+            android:hint="Phone Number"
+            android:paddingStart="20dp"
+            android:inputType="phone"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextshape"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/EntityEmail"
+            android:textSize="16dp"
+            android:hint="Email"
+            android:paddingStart="20dp"
+            android:inputType="textEmailAddress"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextshape"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/EntityState"
+            android:textSize="16dp"
+            android:hint="State"
+            android:paddingStart="20dp"
+            android:inputType="text"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextshape"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/EntityCity"
+            android:textSize="16dp"
+            android:hint="City"
+            android:paddingStart="20dp"
+            android:inputType="text"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextshape"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/EntityAddress"
+            android:textSize="16dp"
+            android:hint="Address"
+            android:paddingStart="20dp"
+            android:inputType="textPostalAddress"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittextshape"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:id="@+id/EntityRent"
+            android:textSize="16dp"
+            android:hint="Rent per month"
+            android:paddingStart="20dp"
+            android:inputType="number"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#000"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="By checking this box, you agree to the Terms and Conditions of use of Abode Online Inc. "
+            android:layout_marginTop="20dp"
+            android:textSize="12dp"
+            android:id="@+id/tncresourcescheckbox"/>
+
+        <android.widget.Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/button0"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="30dp"
+            android:text="Next"
+            android:id="@+id/nextbutton"
+            android:textColor="#ecf0f1"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Designed by"
+                android:textSize="11dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Aditya Asthana"
+                android:textSize="11dp"
+                android:textColor="#e74c3c"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

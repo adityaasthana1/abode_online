@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddImageActivity">
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#bbb"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Uploadedhostelimage"
+            />
+    </LinearLayout>
+
+    <android.widget.Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button0"
+        android:text="Select images"
+        android:textColor="#ecf0f1"
+        android:id="@+id/selecthostelimages"
+        android:textSize="13sp"
+        android:layout_marginTop="40dp"
+        />
+
+    <android.widget.Button
+        android:id="@+id/hostelselectimageuploader"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button0"
+        android:layout_marginTop="20dp"
+        android:text="UPLOAD"
+        android:textColor="#ecf0f1"
+        android:textSize="13sp"/>
+
+
+</LinearLayout>

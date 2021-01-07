@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/signupbg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layoutAnimation="@anim/layout_animation_fast"
+    android:background="#fff"
+    android:padding="3dp"
+    tools:context=".SignupActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abode Online!"
+        android:textStyle="bold"
+        android:fontFamily="@font/galada"
+        android:textSize="40dp"
+        android:textColor="#000"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/lato"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Abode Online! Let's Get you signed up!"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittextshape"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:id="@+id/emailsignup"
+        android:textSize="16dp"
+        android:hint="Email"
+        android:paddingStart="20dp"
+        android:inputType="textEmailAddress"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="20dp"
+
+        android:textColor="#000"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittextshape"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:id="@+id/passwordsignup"
+        android:textSize="16dp"
+        android:hint="Password"
+        android:paddingStart="20dp"
+        android:inputType="textPassword"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="20dp"
+
+        android:textColor="#000"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edittextshape"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:id="@+id/confirmpasswordsu"
+        android:textSize="16dp"
+        android:hint="Confirm Password"
+        android:paddingStart="20dp"
+        android:inputType="textPassword"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"/>
+
+    <android.widget.Button
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/button0"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Sign up"
+        android:id="@+id/signupbutton"
+        android:textColor="#ecf0f1"
+        />
+
+
+
+</LinearLayout>
